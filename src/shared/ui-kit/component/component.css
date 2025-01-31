@@ -1,0 +1,4 @@
+p {
+	color: var(--color-primary, blue);
+	font-size: 1.2em;
+}

@@ -1,0 +1,23 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<title @text="title"></title>
+
+	<style webc:keep @raw="getBundle('css', 'critical')"></style>
+
+	<meta name="description" :content="description">
+
+	<style @raw="getBundle('css')" webc:keep></style>
+</head>
+
+<body>
+	<main @raw="content" webc:nokeep></main>
+
+	<script type="module" :src="getBundleFileUrl('js')" webc:keep></script>
+</body>
+
+</html>

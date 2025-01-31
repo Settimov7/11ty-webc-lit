@@ -1,0 +1,52 @@
+{
+	"extends": [
+		"stylelint-config-standard",
+		"stylelint-config-two-dash-bem",
+		"stylelint-config-clean-order/error",
+		"@stylistic/stylelint-config"
+	],
+	"plugins": [
+		"@double-great/stylelint-a11y",
+		"stylelint-plugin-logical-css"
+	],
+	"rules": {
+		"a11y/media-prefers-reduced-motion": [
+			true,
+			{
+				"severity": "warning",
+				"disableFix": true
+			}
+		],
+		"@stylistic/max-line-length": [
+			120,
+			{
+				"severity": "warning"
+			}
+		],
+		"declaration-block-no-redundant-longhand-properties": [
+			true,
+			{
+				"ignoreShorthands": [
+					"grid-template"
+				]
+			}
+		],
+		"unit-disallowed-list": [
+			[
+				"px"
+			],
+			{
+				"ignoreMediaFeatureNames": {
+					"px": [
+						"width"
+					]
+				}
+			}
+		],
+		"a11y/no-outline-none": true,
+		"a11y/selector-pseudo-class-focus": true,
+		"plugin/use-logical-properties-and-values": true,
+		"plugin/use-logical-units": true,
+		"@stylistic/indentation": "tab"
+	}
+}

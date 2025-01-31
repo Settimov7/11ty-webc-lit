@@ -1,0 +1,44 @@
+{
+	"name": "11ty-webc-lit",
+	"version": "1.0.0",
+	"description": "",
+	"type": "module",
+	"license": "ISC",
+	"author": "",
+	"keywords": [],
+	"engines": {
+		"node": ">=22"
+	},
+	"scripts": {
+		"build": "npx @11ty/eleventy",
+		"start": "npx @11ty/eleventy --serve --quiet",
+		"debug": "DEBUG=Eleventy* npx @11ty/eleventy",
+		"benchmark": "DEBUG=Eleventy:Benchmark* npx @11ty/eleventy",
+		"lint:stylelint": "stylelint \"./src/**/**/**/*.css\"",
+		"lint:stylelint:fix": "stylelint \"./src/**/**/**/*.css\" --fix",
+		"lint:editorconfig": "editorconfig-checker",
+		"lint": "npm run lint:editorconfig && npm run lint:stylelint"
+	},
+	"devDependencies": {
+		"@11ty/eleventy": "3.0.0",
+		"@11ty/eleventy-plugin-webc": "0.11.2",
+		"browserslist": "4.24.4",
+		"browserslist-to-esbuild": "2.1.1",
+		"dotenv": "16.4.7",
+		"esbuild": "0.24.2",
+		"esbuild-plugin-lit-css": "3.0.2",
+		"html-minifier-terser": "7.2.0",
+		"lightningcss": "1.29.1",
+		"node-html-parser": "7.0.1",
+		"stylelint": "16.14.1"
+	},
+	"dependencies": {
+		"@11ty/is-land": "4.0.0",
+		"lit": "3.2.1"
+	},
+	"overrides": {
+		"esbuild-plugin-lit-css": {
+			"esbuild": "$esbuild"
+		}
+	}
+}

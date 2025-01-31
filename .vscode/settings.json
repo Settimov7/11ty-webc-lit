@@ -1,0 +1,14 @@
+{
+	"files.associations": {
+		"*.webc": "html"
+	},
+	"scss.validate": false,
+	"css.validate": false,
+	"less.validate": false,
+	"editor.formatOnSave": true,
+	"editor.codeActionsOnSave": {
+		"source.fixAll.stylelint": "explicit",
+		"source.fixAll.eslint": "never"
+	},
+	"editor.defaultFormatter": "EditorConfig.EditorConfig",
+}

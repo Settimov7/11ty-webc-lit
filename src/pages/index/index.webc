@@ -1,0 +1,22 @@
+---
+permalink: "index.html"
+layout: "base/base.webc"
+
+title: "Index page"
+description: "Index page"
+---
+
+<h1>Title</h1>
+<p>Static content</p>
+
+<a href="/inner-page">Inner Page</a>
+
+<is-land on:idle>
+	<p>Loading...</p>
+
+	<template data-island="replace">
+		<greeting-component name="Name"></greeting-component>
+
+		<script type="module" webc:keep src="/src/shared/ui-kit/component/component.js"></script>
+	</template>
+</is-land>
